@@ -1,0 +1,140 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+h2 {
+  color: #ff6f61;
+  margin-bottom: 10px;
+}
+
+#lesson-list {
+  list-style: decimal inside;
+  margin-bottom: 20px;
+  padding-left: 0;
+  max-width: 600px;
+}
+
+#lesson-list li {
+  padding: 8px 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+#lesson-list li:hover {
+  background-color: #ffd3ca;
+}
+
+#lesson-content {
+  background: white;
+  max-width: 700px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
+}
+
+#lesson-nav {
+  margin-bottom: 40px;
+}
+
+#lesson-nav button {
+  background: #ff6f61;
+  border: none;
+  padding: 12px 22px;
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-right: 12px;
+  transition: background-color 0.3s ease;
+}
+
+#lesson-nav button:disabled {
+  background: #f7a398;
+  cursor: not-allowed;
+}
+
+#lesson-nav button:hover:not(:disabled) {
+  background: #e65c50;
+}
+
+#lesson-piano-container {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+#lesson-piano-container h3 {
+  color: #ff6f61;
+  margin-bottom: 10px;
+}
+
+/* Piano styles */
+#piano {
+  display: flex;
+  position: relative;
+  user-select: none;
+  height: 180px;
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.key {
+  flex: 1;
+  border: 1px solid #ccc;
+  background: white;
+  margin: 0 1px;
+  border-radius: 0 0 12px 12px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+
+.key.black {
+  background: #333;
+  color: white;
+  flex: 0 0 40px;
+  margin: 0 -20px 0 -20px;
+  z-index: 2;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.6);
+}
+
+.key.pressed {
+  background-color: #ff6f61 !important;
+  box-shadow: 0 0 15px #ff6f61;
+  color: white !important;
+}
+
+/* Highlighted keys for lesson */
+.key.highlight {
+  background: #ffef96 !important; /* light yellow highlight */
+  box-shadow: 0 0 12px #ffd54f;
+  color: #333 !important;
+}
+
+.key.black.highlight {
+  background: #c9b037 !important;
+  box-shadow: 0 0 12px #ffca28;
+  color: white !important;
+}
+
+/* Volume slider */
+#volume {
+  width: 200px;
+}
